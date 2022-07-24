@@ -1,0 +1,57 @@
+# The main command prefix that is typed before all commands #
+main-command: mobcoins
+# The command users type to open the mobshop #
+mob-shop-command: mobshop
+# The name of the currency displayed in the mobshop and when players obtain mobcoins through kills #
+currency-name: 'coins'
+# The main prefix displayed before messages sent to the player #
+plugin-prefix: "&6&lMobCoinsPlus &8&l>> "
+# Toggles a currency sign displayed next to the currency #
+enable-currency-symbol: false
+# Set the currency symbol that is used if the above option is true #
+currency-symbol: '$'
+# Name displayed in the mobshop #
+mobshop-gui-name: '&c&lMob Shop'
+# Toggles player message for when mobcoins are obtained through kills #
+drop-messages: true
+# Toggles sound played for players when mobcoins are obtained through kills #
+drop-sounds: true
+# Toggles if permissions are needed in this plugin for non-admin commands #
+enable-permissions: true
+# Toggles if a player should be able to send their mobcoins to another player #
+send-money: true
+# Set the default player starting amount #
+starting-amount: 0
+# Set the default percentage of a player's mobcoins that they lose on death (keep as 0 to disable) #
+# Range is (0.01 - 1) -- 1% == 0.01 and 100% == 1 #
+default-percent-loss-on-death: 0
+# Toggles whether or not the player help message in the messages.yml file will be used #
+# If disabled, the player will be sent the no-permission message #
+enable-player-help: true
+# If enabled, this will return the players mobcoin balance instead of the help command when they type /mobcoins #
+return-mobcoins-amount: false
+# Here you can put any worlds where the player cannot gain mobcoins #
+disabled-worlds:
+  - "world1"
+  - "world2"
+# These are the colors of the stained glass that appear in the mobshop #
+gui-colors:
+  border: 'BLACK'
+  dummy: 'YELLOW'
+# Create groups that can be assigned with permissions - more info for this can be found on the spigot page #
+groups:
+  member:
+    percent_loss_on_death: 0.25
+    # Multipliers must be a whole number that can be multiplied with the mobcoin amount #
+    coin_multiplier: 2
+  vip:
+    percent_loss_on_death: 0.05
+    coin_multiplier: 3
+# To add a mob, simply find it's name on https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html and copy the format below #
+# If you are in a pre 1.16 version and would like to add zombie pigmans, their name is 'PIG_ZOMBIE' #
+mob-drops:
+  COW:
+    # Percent chance of this mob dropping mobcoins (1-100) #
+    chance: 0
+    # Amount of mobcoins to be dropped when a player gets mobcoins from this mob #
+    amount: 0

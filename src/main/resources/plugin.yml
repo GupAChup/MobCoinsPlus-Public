@@ -1,0 +1,15 @@
+main: com.chup.mobcoinsplus.Main
+version: 1.7.1
+api-version: 1.13
+name: MobCoinsPlus
+authors:
+  - GupAChup
+  - MyApaulogies
+description: A helpful plugin that allows mobs to drop currency!
+commands:
+  mobcoins:
+    aliases: mc
+    description: MobCoins commands.
+  mobshop:
+    aliases: ms
+    description: Opens MobCoins shop.
